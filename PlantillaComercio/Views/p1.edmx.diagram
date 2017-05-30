@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5c9d475aa28c479a91ebe37bd9430514" Name="Diagram1">
+        <EntityTypeShape EntityType="p1Model.categoria_empresa" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="p1Model.categoria_evento" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="p1Model.empresa" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="p1Model.evento_empresa" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="p1Model.pago_usuario" Width="1.5" PointX="12" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="p1Model.publicidad" Width="1.5" PointX="7.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="p1Model.tipoentrada" Width="1.5" PointX="7.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="p1Model.transaccion_previa" Width="1.5" PointX="9.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="p1Model.ubicacion_evento" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="p1Model.usuario" Width="1.5" PointX="7.5" PointY="10.375" IsExpanded="true" />
+        <AssociationConnector Association="p1Model.FK__empresa__id_cate__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="p1Model.FK__evento_em__id_ca__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="p1Model.FK__evento_em__id_em__24927208" ManuallyRouted="false" />
+        <AssociationConnector Association="p1Model.FK__publicida__id_em__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="p1Model.FK__evento_em__id_ub__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="p1Model.FK__publicida__id_ev__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="p1Model.FK__tipoentra__id_ev__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="p1Model.FK__pago_usua__id_tr__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="p1Model.FK__transacci__id_ti__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="p1Model.FK__transacci__id_us__267ABA7A" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "Pais";
+}
+<div class="row">
+    <div class="col-lg-1 col-md-1  col-md-1">
+    </div>
+    <div class="col-lg-10 col-md-10  col-md-10">
+        <h2>Pais</h2>
+        <button id="btnAdicionar" class="btn btn-primary btn-sm glyphicon glyphicon-plus-sign pull-right" title="Adicionar"></button>
+    </div>
+    <div class="col-lg-1 col-md-1  col-md-1">
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-1 col-md-1 col-sm-1">
+    </div>
+    <div class="col-lg-10 col-md-10  col-md-10">
+        <table id="tablaPais" class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th id="colID">Codigo</th>
+                <th id="colPais">Pais</th>
+                <th id="colDescripcion">Descripcion</th>
+                <th id="thActualizar"></th>
+                <th id="thEliminar"></th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="col-lg-1 col-md-1  col-md-1">
+    </div>
+</div>
+
+<div class="modal fade" id="agregarPais" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-1 col-md-1  col-md-1">
+                    </div>
+                    <div class="col-lg-10 col-md-10  col-md-10">
+                        <label for="txtNombre">Nombre</label>
+                        <input id="txtNombre" class="form-control" maxlength="50" />
+                    </div>
+                    <div class="col-lg-1 col-md-1  col-md-1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-1 col-md-1  col-md-1">
+                    </div>
+                    <div class="col-lg-10 col-md-10  col-md-10">
+                        <label for="txtDescripcion">Descripcion</label>
+                        <input id="txtDescripcion" class="form-control" maxlength="50" />
+                    </div>
+                    <div class="col-lg-1 col-md-1  col-md-1">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="btnAbmGuardar">Guardar</button>
+                <a id="btnCancelar" class="btn btn-link" href="#" data-dismiss="modal"> Cancelar </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="eliminar" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="text-mensaje-modal">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="btnConfirmarElim">Aceptar</button>
+                <a id="btnCancelarEliminar" class="btn btn-link" href="#" data-dismiss="modal"> Cancelar </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/js/Pais.js"></script>

@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF30824E-7C01-4D75-9CB0-53865315FD96}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AccesoDatos</RootNamespace>
+    <AssemblyName>AccesoDatos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\Entities\Categoria.cs" />
+    <Compile Include="Domain\Entities\CategoriaEvento.cs" />
+    <Compile Include="Domain\Entities\Empresa.cs" />
+    <Compile Include="Domain\Entities\Evento.cs" />
+    <Compile Include="Domain\Entities\NotaDTO.cs" />
+    <Compile Include="Domain\Entities\PagoUsuario.cs" />
+    <Compile Include="Domain\Entities\PaisDTO.cs" />
+    <Compile Include="Domain\Entities\Publicidad.cs" />
+    <Compile Include="Domain\Entities\TipoEntrada.cs" />
+    <Compile Include="Domain\Entities\TransaccionPrevia.cs" />
+    <Compile Include="Domain\Entities\Ubicacion.cs" />
+    <Compile Include="Domain\Entities\Usuario.cs" />
+    <Compile Include="Domain\Entities\UsuarioDTO.cs" />
+    <Compile Include="Domain\Services\CategoriaEventoServicio.cs" />
+    <Compile Include="Domain\Services\CategoriaServicio.cs" />
+    <Compile Include="Domain\Services\ComunServicio.cs" />
+    <Compile Include="Domain\Services\EmpresaServicio.cs" />
+    <Compile Include="Domain\Services\EventoServicio.cs" />
+    <Compile Include="Domain\Services\Pago_UsuarioServicio.cs" />
+    <Compile Include="Domain\Services\PaisServicio.cs" />
+    <Compile Include="Domain\Services\PublicidadServicio.cs" />
+    <Compile Include="Domain\Services\TipoEntradaServicio.cs" />
+    <Compile Include="Domain\Services\TransaccionPreviaServicio.cs" />
+    <Compile Include="Domain\Services\UbicacionServicio.cs" />
+    <Compile Include="Domain\Services\UsuarioServicio.cs" />
+    <Compile Include="Infrastructure\Data\DataModels\categoria_empresa.cs">
+      <DependentUpon>p1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\categoria_evento.cs">
+      <DependentUpon>p1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\DBContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\DBContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\DBContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\empresa.cs">
+      <DependentUpon>p1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\evento_empresa.cs">
+      <DependentUpon>p1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\p1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>p1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\p1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>p1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\p1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>p1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\pago_usuario.cs">
+      <DependentUpon>p1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\Pai.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\publicidad.cs">
+      <DependentUpon>p1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\tipoentrada.cs">
+      <DependentUpon>p1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\transaccion_previa.cs">
+      <DependentUpon>p1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\ubicacion_evento.cs">
+      <DependentUpon>p1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\DataModels\usuario.cs">
+      <DependentUpon>p1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Data\Repositories\CategoriaEventoRepositorio.cs" />
+    <Compile Include="Infrastructure\Data\Repositories\CategoriaRepositorio.cs" />
+    <Compile Include="Infrastructure\Data\Repositories\EFRepositorio.cs" />
+    <Compile Include="Infrastructure\Data\Repositories\EFRepository.cs" />
+    <Compile Include="Infrastructure\Data\Repositories\EmpresaRepositorio.cs" />
+    <Compile Include="Infrastructure\Data\Repositories\EventoRepositorio.cs" />
+    <Compile Include="Infrastructure\Data\Repositories\IEFRepositorio.cs" />
+    <Compile Include="Infrastructure\Data\Repositories\PagoUsuarioRepositorio.cs" />
+    <Compile Include="Infrastructure\Data\Repositories\PaisRepositorio.cs" />
+    <Compile Include="Infrastructure\Data\Repositories\PublicidadRepositorio.cs" />
+    <Compile Include="Infrastructure\Data\Repositories\TipoEntradaRepositorio.cs" />
+    <Compile Include="Infrastructure\Data\Repositories\TransaccionPreviaRepositorio.cs" />
+    <Compile Include="Infrastructure\Data\Repositories\UbicacionRepositorio.cs" />
+    <Compile Include="Infrastructure\Data\Repositories\UsuarioRepositorio.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Infrastructure\Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Infrastructure\Data\DataModels\DBContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Infrastructure\Data\DataModels\DBContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBContext.edmx</DependentUpon>
+      <LastGenOutput>DBContext.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Infrastructure\Data\DataModels\DBContext.edmx.diagram">
+      <DependentUpon>DBContext.edmx</DependentUpon>
+    </None>
+    <None Include="Infrastructure\Data\DataModels\DBContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBContext.edmx</DependentUpon>
+      <LastGenOutput>DBContext.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="Infrastructure\Data\DataModels\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Infrastructure\Data\DataModels\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Infrastructure\Data\DataModels\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="Infrastructure\Data\DataModels\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="Infrastructure\Data\DataModels\p1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>p1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Infrastructure\Data\DataModels\p1.edmx.diagram">
+      <DependentUpon>p1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infrastructure\Data\DataModels\p1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>p1.edmx</DependentUpon>
+      <LastGenOutput>p1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Infrastructure\Data\DataModels\p1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>p1.edmx</DependentUpon>
+      <LastGenOutput>p1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

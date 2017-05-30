@@ -1,0 +1,133 @@
+﻿@{
+    ViewBag.Title = "Usuario";
+}
+<div class="row">
+    <div class="col-lg-1 col-md-1  col-md-1">
+    </div>
+    <div class="col-lg-10 col-md-10  col-md-10">
+        <h2>Usuario</h2>
+        <button id="btnAdicionar" class="btn btn-primary btn-sm glyphicon glyphicon-plus-sign pull-right" title="Adicionar"></button>
+    </div>
+    <div class="col-lg-1 col-md-1  col-md-1">
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-1 col-md-1 col-sm-1">
+    </div>
+    <div class="col-lg-10 col-md-10  col-md-10">
+        <table id="tablaUsuario" class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th id="colID">Usuario</th>
+                    <th id="colPais">Nombre</th>
+                    <th id="colDescripcion">Correo</th>
+                    <th id="colSexo">Sexo</th>
+                    <th id="thActualizar"></th>
+                    <th id="thEliminar"></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="col-lg-1 col-md-1  col-md-1">
+    </div>
+</div>
+
+<div class="modal fade" id="agregarUsuario" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-1 col-md-1  col-md-1">
+                    </div>
+                    <div class="col-lg-10 col-md-10  col-md-10">
+                        <label for="txtUsuario">Usuario</label>
+                        <input id="txtUsuario" class="form-control" maxlength="15" />
+                    </div>
+                    <div class="col-lg-1 col-md-1  col-md-1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-1 col-md-1  col-md-1">
+                    </div>
+                    <div class="col-lg-10 col-md-10  col-md-10">
+                        <label for="txtNombre">Nombre</label>
+                        <input id="txtNombre" class="form-control" maxlength="100" />
+                    </div>
+                    <div class="col-lg-1 col-md-1  col-md-1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-1 col-md-1  col-md-1">
+                    </div>
+                    <div class="col-lg-10 col-md-10  col-md-10">
+                        <label for="txtCorreo">Correo</label>
+                        <input id="txtCorreo" class="form-control" maxlength="100"/>
+                    </div>
+                    <div class="col-lg-1 col-md-1  col-md-1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-1 col-md-1  col-md-1">
+                    </div>
+                    <div class="col-lg-10 col-md-10  col-md-10">
+                        <label for="txtFecha">Fecha Nacimiento</label>
+                        <input id="txtFecha" class="form-control" maxlength="10" />
+                    </div>
+                    <div class="col-lg-1 col-md-1  col-md-1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-1 col-md-1  col-md-1">
+                    </div>
+                    <div class="col-lg-10 col-md-10  col-md-10">
+                        <label for="cmbSexo">Sexo</label>
+                        <select id="cmbSexo " class="form-control">
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-1 col-md-1  col-md-1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-1 col-md-1  col-md-1">
+                    </div>
+                    <div class="col-lg-10 col-md-10  col-md-10">
+                        <label for="cmbPais">Pais</label>
+                        <select id="cmbPais" class="form-control"></select>
+                    </div>
+                    <div class="col-lg-1 col-md-1  col-md-1">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="btnAbmGuardar">Guardar</button>
+                <a id="btnCancelar" class="btn btn-link" href="#" data-dismiss="modal"> Cancelar </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="eliminar" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="text-mensaje-modal">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="btnConfirmarElim">Aceptar</button>
+                <a id="btnCancelarEliminar" class="btn btn-link" href="#" data-dismiss="modal"> Cancelar </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/js/Usuario.js"></script>

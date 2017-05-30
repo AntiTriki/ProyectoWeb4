@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Categoria2";
+}
+
+<script>
+    $(document).ready(function () {
+        $("#Upload").click(function () {
+            var formData = new FormData();
+            var totalFiles = document.getElementById("FileUpload").files.length;
+            for (var i = 0; i < totalFiles; i++) {
+                var file = document.getElementById("FileUpload").files[i];
+
+                formData.append("FileUpload", file);
+            }
+            $.ajax({
+                type: "POST",
+                url: '/Home/Upload',
+                data: formData,
+                dataType: 'json',
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    alert('succes!!');
+                },
+                error: function (error) {
+                    alert("errror");
+                }
+            });
+        });
+
+        $("#Prueba").click(function () {
+            var notaVenta = {
+                NroNota: 5,
+                Nombre: 'Juan Perez',
+                Fecha: '24/04/2017',
+                Detalle: [
+                    { idArticulo: 7, Cantidad: 5, Precio: 50 },
+                    { idArticulo: 8, Cantidad: 2, Precio: 10 },
+                    { idArticulo: 10, Cantidad: 1, Precio: 100 }
+                ]
+            };
+            var nota = JSON.stringify(notaVenta);
+            var url = "/Home/Prueba";
+            var tipo = 'GET';
+            var datos = { nota: nota };
+            var tipoDatos = 'JSON';
+            solicitudAjax(url, alert('succes!!'), datos, tipoDatos, tipo);
+
+        });
+    });
+
+</script>
+
+<h2>Categoria2</h2>
+
+<input type="file" id="FileUpload" multiple />
+<input type="button" id="Upload" value="Upload" />
+</br>
+</br>
+</br>
+</br>
+<input type="button" id="Prueba" value="Prueba" />
+

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/Bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/CSS/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/CSS/toastr.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/Bootstrap/bootstrap.js"></script>
+    <script src="~/Scripts/js/Utiles.js"></script>
+    <script src="~/Scripts/jquery.ui.widget.js"></script>
+    <script src="~/Scripts/jquery-ui-1.11.4.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="container-logo">
+            <div class="divUser">
+                <a href="/Usuario/Registro">Registrarse</a>
+            </div>
+            <div>
+                <h1>Plantilla Comercio Electronico</h1>
+            </div>
+        </div>
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container-nav">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="id12" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/Home/Categoria1">Categoria</a></li>
+                                <li><a href="/Usuario/Usuario">Usuario</a></li>
+                                <li><a href="/Home/Categoria2">Categorias 2</a></li>
+                                <li><a href="/Categoria/Prueba">Prueba</a></li>
+                            </ul>
+                        </li>
+                        <a href="/Categoria/Categoria1">Weadas</a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-md-12">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    @*@Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)*@
+</body>
+</html>
